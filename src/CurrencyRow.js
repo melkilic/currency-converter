@@ -11,8 +11,8 @@ const CurrencyRow = (props) => {
     onChangeAmount,
   } = props;
   return (
-    <div>
-      From/To
+    <div className="currency">
+      {/* From/To */}
       <input
         type="number"
         className="input"

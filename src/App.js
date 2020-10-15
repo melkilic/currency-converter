@@ -52,25 +52,27 @@ function App() {
     setAmountInFromCurrency(false);
   }
   return (
-    <div class="main">
-      <h1>
-        Currency <br /> Converter
-      </h1>
-      <CurrencyRow
-        options={options}
-        selectedCurrency={fromCurrency}
-        onChangeCurrency={(e) => setFromCurrency(e.target.value)}
-        amount={fromAmount}
-        onChangeAmount={handleFromAmountChange}
-      />
-      <div className="equals">=</div>
-      <CurrencyRow
-        options={options}
-        selectedCurrency={toCurrency}
-        onChangeCurrency={(e) => setToCurrency(e.target.value)}
-        onChangeAmount={handleToAmountChange}
-        amount={toAmount}
-      />
+    <div className="main">
+      <div className="converter">
+        <h1>
+          Currency <br /> Converter
+        </h1>
+        <CurrencyRow
+          options={options}
+          selectedCurrency={fromCurrency}
+          onChangeCurrency={(e) => setFromCurrency(e.target.value)}
+          amount={fromAmount}
+          onChangeAmount={handleFromAmountChange}
+        />
+        <div className="equals">=</div>
+        <CurrencyRow
+          options={options}
+          selectedCurrency={toCurrency}
+          onChangeCurrency={(e) => setToCurrency(e.target.value)}
+          onChangeAmount={handleToAmountChange}
+          amount={toAmount}
+        />
+      </div>
     </div>
   );
 }
